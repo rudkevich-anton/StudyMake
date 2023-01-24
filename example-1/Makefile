@@ -14,6 +14,10 @@ release: hello
 hello: hello.cpp
 	g++ -O2 hello.cpp -o hello -DNDEBUG -Wall
 
-clean:
-	rm -f hello 
-
+clean: 
+		# Для Windows 7
+	del -f hello.exe
+	del -f hello-dbg.exe
+		#Для UNIX-like
+	#rm -f hello.exe
+	#rm -f hello-dbg.exe
