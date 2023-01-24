@@ -11,7 +11,7 @@ int main()
     cout<<"Ты загадываешь число - я бросаю кость.\n";
     cout<<"Если ты угадал с трех попыток - ты выиграл\n";
     cout<<"Нет - проиграл, и настало время отчислений\n";
-    srandom(time(nullptr));
+    srand(time(nullptr));
     for (int i = 0; i<3; i++) {
         cout<<"введите число от 1 до 6 : ";
         int num;
@@ -28,7 +28,7 @@ int main()
             cerr<<"С таким числом ты сразу проиграл\n";
             return 2;
         }
-        int res = random() % 6 + 1;
+        int res = rand() % 6 + 1;
         cout<<"Выпало число "<<res<<endl;
         if (num == res) {
             cout<<"Ты читер!!!\n";
